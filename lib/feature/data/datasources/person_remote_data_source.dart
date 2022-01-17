@@ -12,7 +12,6 @@ abstract class PersonRemoteDataSource {
   /// Calls the https://rickandmortyapi.com/api/character/?name=rick endpoint.
   ///
   /// Throws a [ServerException] for all error codes.
-
   Future<List<PersonModel>> searchPerson(String query);
 }
 
