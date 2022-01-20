@@ -9,7 +9,9 @@ const CACHED_FAILURE_MESSAGE = 'Cache Failure';
 
 class PersonSearchBloc extends Bloc<PersonSearchEvent, PersonSearchState> {
   final SearchPerson searchPerson;
-  PersonSearchBloc({required this.searchPerson}) : super(PersonEmpty());
+
+  PersonSearchBloc({required this.searchPerson}) : super(PersonSearchEmpty());
+
   @override
   Stream<PersonSearchState> mapEventToState(PersonSearchEvent event) async* {
     if (event is SearchPersons) {
@@ -19,6 +21,7 @@ class PersonSearchBloc extends Bloc<PersonSearchEvent, PersonSearchState> {
 
   Stream<PersonSearchState> _mapFetchPersonsToState(String personQuery) async* {
     yield PersonSearchLoading();
+
     final failureOrPerson =
         await searchPerson(SearchPersonParams(query: personQuery));
 

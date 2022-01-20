@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:equatable/equatable.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 
@@ -9,7 +7,7 @@ abstract class PersonSearchState extends Equatable {
   List<Object> get props => [];
 }
 
-class PersonEmpty extends PersonSearchState {}
+class PersonSearchEmpty extends PersonSearchState {}
 
 class PersonSearchLoading extends PersonSearchState {}
 

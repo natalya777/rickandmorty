@@ -25,12 +25,12 @@ class PersonLoading extends PersonState {
 }
 
 class PersonLoaded extends PersonState {
-  final List<PersonEntity> personList;
+  final List<PersonEntity> personsList;
 
-  PersonLoaded(this.personList);
+  PersonLoaded(this.personsList);
   @override
   // TODO: implement props
-  List<Object> get props => [personList];
+  List<Object> get props => [personsList];
 }
 
 class PersonError extends PersonState {

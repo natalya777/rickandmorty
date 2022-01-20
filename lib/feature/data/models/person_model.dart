@@ -1,4 +1,4 @@
-import 'dart:convert';
+//import 'dart:convert';
 
 import 'package:rickandmorty/feature/data/models/location_model.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
@@ -45,7 +45,7 @@ class PersonModel extends PersonEntity {
           : null,
       image: json['image'],
       episode:
-          (json['episode'] as List<dynamic>).map((e) => e as String).toList,
+          (json['episode'] as List<dynamic>).map((e) => e as String).toList(),
       created: DateTime.parse(json['created'] as String),
     );
   }
