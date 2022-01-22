@@ -10,6 +10,9 @@ import 'package:rickandmorty/feature/presentation/widgets/person_card_widget.dar
 
 class PersonsList extends StatelessWidget {
   final scrollController = ScrollController();
+  final int page = -1;
+  PersonsList({Key? key}) : super(key: key);
+
   void setupScrollController(BuildContext context) {
     scrollController.addListener(() {
       if (scrollController.position.atEdge) {

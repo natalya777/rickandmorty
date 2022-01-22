@@ -2,14 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class PersonCacheImage extends StatelessWidget {
-  final String imageUrl;
-  final double width, height;
+  final String? imageUrl;
+  final double? width, height;
 
-  const PersonCacheImage(
-      {@required Key key,
-      @required this.imageUrl,
-      @required this.width,
-      @required this.height})
+  const PersonCacheImage({Key? key, this.imageUrl, this.width, this.height})
       : super(key: key);
 
   Widget _imageWidget(ImageProvider imageProvider) {
@@ -30,7 +26,7 @@ class PersonCacheImage extends StatelessWidget {
     return CachedNetworkImage(
       width: width,
       height: height,
-      imageUrl: imageUrl,
+      imageUrl: imageUrl ?? '',
       imageBuilder: (context, imageProvider) {
         return _imageWidget(imageProvider);
       },

@@ -19,7 +19,7 @@ abstract class PersonRemoteDataSource {
 class PersonRemoteDataSourceImpl implements PersonRemoteDataSource {
   final http.Client client;
 
-  PersonRemoteDataSourceImpl({@required this.client});
+  PersonRemoteDataSourceImpl({required this.client});
 
   @override
   Future<List<PersonModel>> getAllPersons(int page) => _getPersonFromUrl(

@@ -7,7 +7,7 @@ import 'package:rickandmorty/feature/presentation/widgets/person_cache_image_wid
 class PersonCard extends StatelessWidget {
   final PersonEntity person;
 
-  const PersonCard({Key key, @required this.person}) : super(key: key);
+  const PersonCard({Key? key, required this.person}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +27,11 @@ class PersonCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              child: PersonCacheImage(
-                width: 166,
-                height: 166,
-                imageUrl: person.image,
-                key: null,
-              ),
+            PersonCacheImage(
+              width: 166,
+              height: 166,
+              imageUrl: person.image,
+              key: null,
             ),
             const SizedBox(
               width: 16,

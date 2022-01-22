@@ -10,7 +10,7 @@ const CACHED_FAILURE_MESSAGE = 'Cache Failure';
 
 class PersonListCubit extends Cubit<PersonState> {
   final GetAllPersons getAllPersons;
-  PersonListCubit({@required this.getAllPersons}) : super(PersonEmpty());
+  PersonListCubit({required this.getAllPersons}) : super(PersonEmpty());
   int page = 1;
   void loadPerson() async {
     if (state is PersonLoading) return;

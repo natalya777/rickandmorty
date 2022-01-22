@@ -6,17 +6,17 @@ import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 
 class PersonModel extends PersonEntity {
   PersonModel({
-    @required id,
-    @required name,
-    @required status,
-    @required species,
-    @required type,
-    @required gender,
-    @required origin,
-    @required location,
-    @required image,
-    @required episode,
-    @required created,
+    required id,
+    required name,
+    required status,
+    required species,
+    required type,
+    required gender,
+    required origin,
+    required location,
+    required image,
+    required episode,
+    required created,
   }) : super(
           id: id,
           name: name,

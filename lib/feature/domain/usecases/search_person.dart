@@ -19,7 +19,7 @@ class SearchPerson extends UseCase<List<PersonEntity>, SearchPersonParams> {
 class SearchPersonParams extends Equatable {
   final String query;
 
-  SearchPersonParams({@required this.query});
+  SearchPersonParams({required this.query});
   @override
   // TODO: implement props
   List<Object> get props => [query];

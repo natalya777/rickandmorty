@@ -15,9 +15,9 @@ class PersonRepositoryImpl implements PersonRepository {
   final NetworkInfo networkInfo;
 
   PersonRepositoryImpl({
-    @required this.remoteDataSource,
-    @required this.localDataSource,
-    @required this.networkInfo,
+    required this.remoteDataSource,
+    required this.localDataSource,
+    required this.networkInfo,
   });
 
   @override

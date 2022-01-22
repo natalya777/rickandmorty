@@ -20,13 +20,13 @@ const CACHED_PERSONS_LIST = 'CACHED_PERSONS_LIST';
 class PersonLocalDataSourceImpl implements PersonLocalDataSource {
   final SharedPreferences sharedPreferences;
 
-  PersonLocalDataSourceImpl({@required this.sharedPreferences});
+  PersonLocalDataSourceImpl({required this.sharedPreferences});
 
   @override
   Future<List<PersonModel>> getLastPersonsFromCache() {
     final jsonPersonsList =
         sharedPreferences.getStringList(CACHED_PERSONS_LIST);
-    if (jsonPersonsList.isNotEmpty) {
+    if (jsonPersonsList != null) {
       print('Get Persons from Cache: ${jsonPersonsList.length}');
       return Future.value(jsonPersonsList
           .map((person) => PersonModel.fromJson(json.decode(person)))

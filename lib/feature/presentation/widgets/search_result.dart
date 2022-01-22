@@ -6,7 +6,7 @@ import 'package:rickandmorty/feature/presentation/widgets/person_cache_image_wid
 class SearchResult extends StatelessWidget {
   final PersonEntity personResult;
 
-  SearchResult({@required this.personResult});
+  SearchResult({required this.personResult});
 
   @override
   Widget build(BuildContext context) {

@@ -19,7 +19,7 @@ class GetAllPersons extends UseCase<List<PersonEntity>, PagePersonParams> {
 class PagePersonParams extends Equatable {
   final int page;
 
-  PagePersonParams({@required this.page});
+  PagePersonParams({required this.page});
   @override
   // TODO: implement props
   List<Object> get props => [page];
