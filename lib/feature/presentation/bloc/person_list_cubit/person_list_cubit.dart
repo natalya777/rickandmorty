@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/failure.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 import 'package:rickandmorty/feature/domain/usecases/get_all_persons.dart';
@@ -9,7 +10,7 @@ const CACHED_FAILURE_MESSAGE = 'Cache Failure';
 
 class PersonListCubit extends Cubit<PersonState> {
   final GetAllPersons getAllPersons;
-  PersonListCubit({required this.getAllPersons}) : super(PersonEmpty());
+  PersonListCubit({@required this.getAllPersons}) : super(PersonEmpty());
   int page = 1;
   void loadPerson() async {
     if (state is PersonLoading) return;

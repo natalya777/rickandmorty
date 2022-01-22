@@ -6,7 +6,7 @@ import 'package:rickandmorty/feature/presentation/widgets/person_cache_image_wid
 class PersonDetailPage extends StatelessWidget {
   final PersonEntity person;
 
-  const PersonDetailPage({Key? key, required this.person}) : super(key: key);
+  const PersonDetailPage({Key key, @required this.person}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

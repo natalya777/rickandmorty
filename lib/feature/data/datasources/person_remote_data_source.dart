@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/excepcion.dart';
 import 'package:rickandmorty/feature/data/models/person_model.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +19,7 @@ abstract class PersonRemoteDataSource {
 class PersonRemoteDataSourceImpl implements PersonRemoteDataSource {
   final http.Client client;
 
-  PersonRemoteDataSourceImpl({required this.client});
+  PersonRemoteDataSourceImpl({@required this.client});
 
   @override
   Future<List<PersonModel>> getAllPersons(int page) => _getPersonFromUrl(

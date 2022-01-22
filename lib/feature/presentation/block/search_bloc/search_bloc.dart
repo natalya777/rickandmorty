@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/failure.dart';
 import 'package:rickandmorty/feature/domain/usecases/search_person.dart';
 import 'package:rickandmorty/feature/presentation/block/search_bloc/search_event.dart';
@@ -10,9 +11,8 @@ const CACHED_FAILURE_MESSAGE = 'Cache Failure';
 class PersonSearchBloc extends Bloc<PersonSearchEvent, PersonSearchState> {
   final SearchPerson searchPerson;
 
-  PersonSearchBloc({required this.searchPerson}) : super(PersonSearchEmpty());
+  PersonSearchBloc({@required this.searchPerson}) : super(PersonSearchEmpty());
 
-  @override
   Stream<PersonSearchState> mapEventToState(PersonSearchEvent event) async* {
     if (event is SearchPersons) {
       yield* _mapFetchPersonsToState(event.personQuery);

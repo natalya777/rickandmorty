@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/excepcion.dart';
 import 'package:rickandmorty/core/platform/network_info.dart';
 import 'package:rickandmorty/feature/data/datasources/person_local_data_source.dart';
@@ -14,9 +15,9 @@ class PersonRepositoryImpl implements PersonRepository {
   final NetworkInfo networkInfo;
 
   PersonRepositoryImpl({
-    required this.remoteDataSource,
-    required this.localDataSource,
-    required this.networkInfo,
+    @required this.remoteDataSource,
+    @required this.localDataSource,
+    @required this.networkInfo,
   });
 
   @override

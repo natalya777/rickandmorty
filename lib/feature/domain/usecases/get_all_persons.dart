@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/failure.dart';
 import 'package:rickandmorty/core/usecases/usecases.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
@@ -18,8 +19,8 @@ class GetAllPersons extends UseCase<List<PersonEntity>, PagePersonParams> {
 class PagePersonParams extends Equatable {
   final int page;
 
-  PagePersonParams({required this.page});
+  PagePersonParams({@required this.page});
   @override
   // TODO: implement props
-  List<Object?> get props => [page];
+  List<Object> get props => [page];
 }

@@ -6,10 +6,10 @@ class PersonCacheImage extends StatelessWidget {
   final double width, height;
 
   const PersonCacheImage(
-      {Key? key,
-      required this.imageUrl,
-      required this.width,
-      required this.height})
+      {@required Key key,
+      @required this.imageUrl,
+      @required this.width,
+      @required this.height})
       : super(key: key);
 
   Widget _imageWidget(ImageProvider imageProvider) {

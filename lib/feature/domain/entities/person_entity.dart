@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-//import 'package:meta/meta.dart';
+import 'package:meta/meta.dart';
 
 class PersonEntity extends Equatable {
   final int id;
@@ -15,22 +15,22 @@ class PersonEntity extends Equatable {
   final DateTime created;
 
   const PersonEntity({
-    required this.id,
-    required this.name,
-    required this.status,
-    required this.species,
-    required this.type,
-    required this.gender,
-    required this.origin,
-    required this.location,
-    required this.image,
-    required this.episode,
-    required this.created,
+    @required this.id,
+    @required this.name,
+    @required this.status,
+    @required this.species,
+    @required this.type,
+    @required this.gender,
+    @required this.origin,
+    @required this.location,
+    @required this.image,
+    @required this.episode,
+    @required this.created,
   });
 
   @override
   // TODO: implement props
-  List<Object?> get props => [
+  List<Object> get props => [
         id,
         name,
         status,
@@ -49,5 +49,5 @@ class LocationEntity {
   final String name;
   final String url;
 
-  const LocationEntity({required this.name, required this.url});
+  const LocationEntity({@required this.name, @required this.url});
 }

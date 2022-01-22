@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 
 abstract class PersonState extends Equatable {
@@ -36,7 +37,7 @@ class PersonLoaded extends PersonState {
 class PersonError extends PersonState {
   final String message;
 
-  PersonError({required this.message});
+  PersonError({@required this.message});
   @override
   // TODO: implement props
   List<Object> get props => [message];

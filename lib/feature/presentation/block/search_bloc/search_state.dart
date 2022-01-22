@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 
 abstract class PersonSearchState extends Equatable {
@@ -14,7 +15,7 @@ class PersonSearchLoading extends PersonSearchState {}
 class PersonSearchLoaded extends PersonSearchState {
   final List<PersonEntity> persons;
 
-  PersonSearchLoaded({required this.persons});
+  PersonSearchLoaded({@required this.persons});
   @override
   List<Object> get props => [persons];
 }
@@ -22,7 +23,7 @@ class PersonSearchLoaded extends PersonSearchState {
 class PersonSearchError extends PersonSearchState {
   final String message;
 
-  PersonSearchError({required this.message});
+  PersonSearchError({@required this.message});
   @override
   // TODO: implement props
   List<Object> get props => [message];
