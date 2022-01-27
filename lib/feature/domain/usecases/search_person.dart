@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/error/failure.dart';
 import 'package:rickandmorty/core/usecases/usecases.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';

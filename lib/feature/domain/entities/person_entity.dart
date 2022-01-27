@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
+//import 'package:meta/meta.dart';
 
 class PersonEntity extends Equatable {
   final int id;

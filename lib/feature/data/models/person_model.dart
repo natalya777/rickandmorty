@@ -1,6 +1,6 @@
 //import 'dart:convert';
 
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 import 'package:rickandmorty/feature/data/models/location_model.dart';
 import 'package:rickandmorty/feature/domain/entities/person_entity.dart';
 
